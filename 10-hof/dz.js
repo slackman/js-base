@@ -1,23 +1,22 @@
 const arr = [3, 6, 9, 2];
 
 function needsRemoval(element) {
-    return element > 5 ? true : false;
+    return element > 5;
 }
 
-function deleteElementsFromArray() {
-
-	for (let i = arr.length - 1; i >= 0; i--) {
-		if (needsRemoval(arr[i])) {
-			arr.splice(i, 1);
-		}
+function deleteElementsFromArray(array, shouldRemove) {
+	const copyArr = array.slice()
+	for (let i = copyArr.length - 1; i >= 0; i--) {
+		if (shouldRemove(copyArr[i])) {
+            copyArr.splice(i, 1);
+        }
 	}
-
+	return copyArr;
 }
 
-function deleteElements(arr, deleteElementsFromArray) {
-	deleteElementsFromArray();
-	return arr;
+function deleteElements(array, remover) {
+	return deleteElementsFromArray(array, remover);
 }
 
-const arrAfterDelete = deleteElements(arr, deleteElementsFromArray);
+const arrAfterDelete = deleteElements(arr, needsRemoval);
 console.log(arrAfterDelete);
