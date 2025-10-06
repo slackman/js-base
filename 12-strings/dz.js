@@ -3,13 +3,15 @@
 	а функция возвращает true, если карта проходит алгоритм и false, если нет.
 */
 
-const card = "4561-2612-1234-5464";
+const cardFalse = "4561-2612-1234-5464";
+const cardTrue = "4561-2612-1234-548";
 
 function luna(card) {
     card = card.trim().replaceAll("-", "");
-    newCard = "";
+    let newCard = "";
     for (i in card) {
-        if (i % 2 === 0) {
+		const shouldDouble = (card.length - i) % 2 === 0;
+        if (shouldDouble) {
             let newEl = card[i] * 2;
             if (newEl > 9) {
                 newEl -= 9;
@@ -19,11 +21,13 @@ function luna(card) {
             newCard += card[i];
         }
     }
-	
+
     let chars = [...newCard];
 	const charsSum = chars.reduce((agg, el) => agg + Number(el), 0);
+	console.log(charsSum);
 
 	return charsSum % 10 === 0 ? true : false;
 }
 
-console.log(luna(card));
+console.log(luna(cardFalse));
+console.log(luna(cardTrue));
