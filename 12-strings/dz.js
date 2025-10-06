@@ -9,8 +9,8 @@ const cardTrue = "4561-2612-1234-548";
 function luna(card) {
     card = card.trim().replaceAll("-", "");
     let newCard = "";
-    for (i in card) {
-		const shouldDouble = (card.length - i) % 2 === 0;
+    for (const i in card) {
+        const shouldDouble = (card.length - i) % 2 === 1;
         if (shouldDouble) {
             let newEl = card[i] * 2;
             if (newEl > 9) {
@@ -26,7 +26,7 @@ function luna(card) {
 	const charsSum = chars.reduce((agg, el) => agg + Number(el), 0);
 	console.log(charsSum);
 
-	return charsSum % 10 === 0 ? true : false;
+	return charsSum % 10 === 0;
 }
 
 console.log(luna(cardFalse));
