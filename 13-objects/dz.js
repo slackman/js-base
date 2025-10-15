@@ -12,15 +12,15 @@ const queryParams = {
 };
 
 function getQueryParams(queryParams) {
-	let searchString = '';
-	for (const key in queryParams) {
-		if (searchString != '') {
-			searchString += '&';
-		}
-		searchString += `${key}=${queryParams[key]}`;
-	}
+    let searchString = '';
+    for (const key in queryParams) {
+        if (searchString != '') {
+            searchString += '&';
+        }
+        searchString += `${key}=${queryParams[key]}`;
+    }
 
-	return searchString;
+    return searchString;
 }
 
 console.log(getQueryParams(queryParams));
