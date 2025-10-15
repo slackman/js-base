@@ -38,5 +38,4 @@ toDoList.addTask('Попить воды', 1);
 toDoList.deleteTask(1);
 toDoList.updateName('Поесть', 5, 4);
 toDoList.sortTasksByPriority();
-
 console.log(toDoList.tasks);
