@@ -11,8 +11,8 @@
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"program": "${workspaceFolder}/13-objects/13_1.js",
-			"runtimeExecutable": "/usr/local/bin/node"
+			"program": "${workspaceFolder}/16-management-this/dz.js",
+			"runtimeExecutable": "/opt/homebrew/bin/node"
 		}
 	]
 }
