@@ -11,7 +11,7 @@
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"program": "${workspaceFolder}/16-management-this/dz.js",
+			"program": "${workspaceFolder}/17-manipulation-objects/dz.js",
 			"runtimeExecutable": "/opt/homebrew/bin/node"
 		}
 	]
