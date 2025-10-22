@@ -68,7 +68,7 @@ function rerenderContent(activeHabit) {
     page.content.daysContainer.innerHTML = '';
     for (const index in activeHabit.days) {
         //     // console.log(day);
-        const element = document.createElement('.div');
+        const element = document.createElement('div');
         // element.innerHTML = подставляем html от habit_day
     }
 }
